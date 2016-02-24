@@ -15,5 +15,6 @@ while 1:
     time = d["time"]
     status=d["status"]
     username=d["username"]
-    conn.setex(time, delta, 120)
-    print json.dumps({"time":time, "delta":delta, "status":status, "username":username})
+    rate=d["rate"]
+    conn.setex(time, rate, 120)
+    print json.dumps({"time":time, "rate": rate, "delta":delta, "status":status, "username":username})
