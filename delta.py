@@ -16,5 +16,9 @@ while True:
 	delta=t-lastArrival
 	lastArrival=t
 	#calculating rate of arrival between two tweets
-	print json.dumps({"delta": delta, "time": t, "status":status, "username":username})
-	sys.stdout.flush()
+	#calculating the rate and setting the rate to 1 message/second
+	rate=1/delta
+	if rate>1:
+		print json.dumps({"delta": delta,"rate": rate,"time": t, "status":status, "username":username})
+		sys.stdout.flush()
+
