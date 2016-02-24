@@ -1,3 +1,4 @@
+#I have used Tweepy Library as it provides easy methods to connect with Twitter Streaming API 
 #Import the necessary methods from tweepy library
 import tweepy
 import time
@@ -8,10 +9,10 @@ from tweepy import OAuthHandler
 from tweepy import Stream
 
 #Variables that contains the user credentials to access Twitter API 
-access_token = "ENTER YOUR ACCESS TOKEN"
-access_token_secret = "ENTER YOUR ACCESS TOKEN SECRET"
-consumer_key = "ENTER YOUR API KEY"
-consumer_secret = "ENTER YOUR API SECRET"
+access_token = 
+access_token_secret = 
+consumer_key = 
+consumer_secret = 
 
 
 #This is a basic listener that just prints received tweets to stdout.
@@ -36,8 +37,8 @@ if __name__ == '__main__':
 
     #This handles Twitter authetification and the connection to Twitter Streaming API
     l = StdOutListener()
-    auth=tweepy.OAuthHandler('LEbqgSpTblFldGI13LXUNYVOA','dc8i1mfLwmTUtk3K5XnnqW0KJvGfnrjYtphreGFingVBjQGeBb')
-    auth.set_access_token('137228501-ZnKjgQS9P8mb6Mfa7SnA78lsV90MSvmuVCUpSE83','NKt5owZ7GWZ4UlMWI4yHwKVxXdXRdKD6z4B643TVXIJ6W')
+    auth=tweepy.OAuthHandler("ENTER YOUR API KEY","ENTER YOUR API SECRET")
+    auth.set_access_token("ENTER YOUR ACCESS TOKEN","ENTER YOUR ACCESS TOKEN SECRET")
     stream = Stream(auth, l)
 
     #This line filter Twitter Streams to capture data by the keywords: 'python', 'javascript', 'ruby'
