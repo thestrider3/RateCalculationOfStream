@@ -1,5 +1,6 @@
 #I have used Tweepy Library as it provides easy methods to connect with Twitter Streaming API
-# I have imported Time Library to easily get current system time
+#I have imported Time Library to easily get current system time
+#The code snippets used here were taken from this blog: http://adilmoujahid.com/posts/2014/07/twitter-analytics/
 #Import the necessary methods from tweepy library
 import tweepy
 import time
