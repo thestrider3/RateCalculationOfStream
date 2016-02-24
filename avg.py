@@ -28,13 +28,8 @@ while 1:
         rate = sum(deltas)/float(len(deltas))
     else:
         rate = 0
-
-    print json.dumps({"rate":rate})
-    sys.stdout.flush()
-
-    time.sleep(0.5)
-    auth=tweepy.OAuthHandler('LEbqgSpTblFldGI13LXUNYVOA','dc8i1mfLwmTUtk3K5XnnqW0KJvGfnrjYtphreGFingVBjQGeBb')
-    auth.set_access_token('137228501-ZnKjgQS9P8mb6Mfa7SnA78lsV90MSvmuVCUpSE83','NKt5owZ7GWZ4UlMWI4yHwKVxXdXRdKD6z4B643TVXIJ6W')
+    auth=tweepy.OAuthHandler("ENTER YOUR API KEY","ENTER YOUR API SECRET")
+    auth.set_access_token("ENTER YOUR ACCESS TOKEN" ,"ENTER YOUR SECRET ACCESS TOKEN")
     api = tweepy.API(auth)
     print api.me().name
     count=count+1
